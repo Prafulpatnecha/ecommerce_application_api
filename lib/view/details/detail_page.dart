@@ -197,7 +197,9 @@ class DetailPage extends StatelessWidget {
                               image: apiModal
                                   .products[homeProviderTrue.selectIndex]
                                   .images[0],
-                              quantity: 1);
+                              quantity: 1, minimumOrderQuantity: apiModal
+                              .products[homeProviderTrue.selectIndex]
+                              .minimumOrderQuantity);
                         }
                         Navigator.of(context).pushNamed('/cart');
                       },

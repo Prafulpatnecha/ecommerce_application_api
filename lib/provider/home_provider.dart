@@ -56,9 +56,9 @@ class HomeProvider extends ChangeNotifier
     notifyListeners();
         return check;
   }
-  void cartAddingMethod({required int id,required String title,required String image,required dynamic price,required int index,required int quantity})
+  void cartAddingMethod({required int id,required String title,required String image,required dynamic price,required int index,required int quantity,required int minimumOrderQuantity})
   {
-    cartDataStore.add({'id': id,'title': title,'price': price,'index':index,'image':image,'quantity':quantity});
+    cartDataStore.add({'id': id,'title': title,'price': price,'index':index,'image':image,'quantity':quantity,'minimumOrderQuantity':minimumOrderQuantity});
     totalMethod();
     notifyListeners();
   }
@@ -80,8 +80,12 @@ class HomeProvider extends ChangeNotifier
   {
     if(boolValue==0)
       {
-        cartDataStore[index]['quantity']++;
-        totalMethod();
+        print(cartDataStore[index]['stock']);
+        if(cartDataStore[index]['quantity']<cartDataStore[index]['minimumOrderQuantity'])
+          {
+            cartDataStore[index]['quantity']++;
+            totalMethod();
+          }
       }
     else if(boolValue==10)
       {
