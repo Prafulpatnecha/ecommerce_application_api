@@ -32,7 +32,8 @@ samples, guidance on mobile development, and a full API reference.
 <a href="https://github.com/Prafulpatnecha/ecommerce_application_api/tree/master/lib">-> Code File Link <-</a>
 </div>
 <h1></h1>
-
+## Description
+Embark on a new shopping journey with our app. 📲 Download today and start enjoying the best deals, 🏷️ a vast product selection, 🛍️ and a convenient shopping experience all in one place. Shop smarter, 🧠 live better with our e-commerce app. ✨
 
 
 https://github.com/user-attachments/assets/fe628cbc-9970-4588-b7be-e048bb56e8a3
