@@ -1,6 +1,4 @@
 
-import 'package:provider/provider.dart';
-
 class ApiModal{
   late int total,skip,limit;
   late List<Products> products;

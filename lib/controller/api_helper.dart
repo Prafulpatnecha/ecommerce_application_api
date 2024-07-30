@@ -5,9 +5,10 @@ import 'package:http/http.dart';
 
 class ApiHelper
 {
+    String apiLink='https://dummyjson.com/products';
     Future<Map> apiCalling()
     async {
-        Uri uri=Uri.parse('https://dummyjson.com/products');
+        Uri uri=Uri.parse(apiLink);
         Response response= await http.get(uri);
         if(response.statusCode==200)
             {
@@ -15,7 +16,10 @@ class ApiHelper
                 final json= jsonDecode(body);
                 return json;
             }
+        else{
+            print('error find apiHelper');
         return {};
+        }
     }
 
 }
